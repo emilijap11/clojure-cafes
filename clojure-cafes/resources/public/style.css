@@ -1,0 +1,215 @@
+
+body {
+    font-family: 'Garamond', 'Georgia', serif;
+    background: #f5f0e6;
+    color: #5a4632;
+    margin: 0;
+    padding: 0 15px;
+}
+
+h1 {
+    color: #7b5e3c;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+form {
+    background-color: #fffaf3;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    max-width: 650px;
+    margin: 0 auto 40px;
+    transition: all 0.3s ease;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+select {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #c1a67a;
+    font-size: 16px;
+    font-family: 'Garamond', 'Georgia', serif;
+    background: #fffaf3;
+    color: #5a4632;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    appearance: none;
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    select:hover, select:focus {
+        border-color: #a67c52;
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        outline: none;
+    }
+}
+
+select option {
+    font-size: 16px;
+    font-family: 'Garamond', 'Georgia', serif;
+    color: #5a4632;
+    background-color: #fffaf3;
+    padding: 12px 15px;
+}
+
+
+
+@media (hover: hover) and (pointer: fine) {
+    select:focus option:hover {
+        background-color: #f0e1d6;
+        font-weight: 600;
+    }
+}
+
+select, button[type="submit"] {
+    select, button[type="submit"] {
+
+        padding: 16px 18px;
+    }
+    font-size: 16px;
+
+}
+
+
+
+button[type="submit"]:hover, .maps-button:hover {
+    background: linear-gradient(135deg, #8b5e3c, #6b4a2f);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 650px;
+    margin: 0 auto 60px;
+}
+
+li {
+    margin: 15px 0;
+    padding: 18px 22px;
+    background-color: #efe2d0;
+    border-left: 5px solid #a67c52;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-family: 'Garamond', 'Georgia', serif;
+}
+
+.coffee-form {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.coffee-form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+form:hover {
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+
+button[type="submit"], .maps-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #a67c52, #8b5e3c);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px 25px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+
+.back-button {
+    font-family: 'Garamond', 'Georgia', serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 25px;
+    background-color: #7b5e3c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+
+
+    background-color: #6b4a2f;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.map-button {
+    display: inline-block;
+    background-color: sienna;
+    color: #fff7e6;
+    font-family: 'Garamond', 'Georgia', serif;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 2px solid peru;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.map-button:hover {
+    background-color: peru;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+
+
+
+
+
+

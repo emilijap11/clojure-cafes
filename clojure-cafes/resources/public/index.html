@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronađi kafic</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+<form action="/search" method="post">
+
+    <label>Kakvu želiš kafu?</label>
+    <select name="service" id="service">
+        <option value="sit-in">U kafiću</option>
+        <option value="to-go">Za poneti</option>
+    </select>
+
+    <br><br>
+
+    <label>Kafa:</label>
+    <select name="coffee">
+        <option value="espresso">Espresso</option>
+        <option value="cappuccino">Capuccino</option>
+        <option value="latte">Latte</option>
+        <option value="macchiato">Macchiato</option>
+        <option value="nes">Ness coffee</option>
+        <option value="lungo">Lungo</option>
+        <option value="doppio">Doppio</option>
+        <option value="americano">Americano</option>
+        <option value="mocha">Mocha</option>
+        <option value="irish">Irish coffee</option>
+        <option value="filter">Filter</option>
+        <option value="macha">Macha</option>
+    </select>
+
+    <br><br>
+    <label>Lokacija:</label>
+    <select name="location" id="location-select">
+        <option value="Centar">Centar</option>
+        <option value="Vračar">Vračar</option>
+        <option value="Stari Grad">Stari Grad</option>
+        <option value="Voždovac">Voždovac</option>
+        <option value="Čukarica">Čukarica</option>
+        <option value="Banovo brdo">Banovo brdo</option>
+        <option value="Zemun">Zemun</option>
+        <option value="Savski venac">Savski venac</option>
+        <option value="Zvezdara">Zvezdara</option>
+        <option value="Novi Beograd">Novi Beograd</option>
+    </select>
+
+    <br><br>
+    <label>Alternative za mleko:</label>
+    <select name="milk">
+        <option value="soy">Sojino</option>
+        <option value="coconut">Kokosovo</option>
+        <option value="almond">Bademovo</option>
+        <option value="oat">Ovseno</option>
+    </select>
+
+    <br><br>
+    <div class="sit-in-only">
+        <label>Ambijent:</label>
+        <select name="ambience">
+            <option value="cozy">Cozy</option>
+            <option value="quiet">Tih</option>
+            <option value="friendly">Društveno</option>
+            <option value="work">Za rad</option>
+        </select>
+    </div>
+
+    <br><br>
+    <div class="sit-in-only">
+        <label>Zona pušenja:</label>
+        <select name="smoke">
+            <option value="smoke">Pušačka zona</option>
+            <option value="no-smoke">Ne pušačka zona</option>
+        </select>
+    </div>
+
+    <br><br>
+    <div class="sit-in-only">
+        <label>Pet friendly:</label>
+        <select name="pet">
+            <option value="yes">Da</option>
+            <option value="no">Ne</option>
+        </select>
+    </div>
+
+    <br><br>
+    <button type="submit">Traži kafiće</button>
+
+</form>
+
+</body>
+</html>

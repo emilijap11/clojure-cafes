@@ -1,0 +1,14 @@
+{:paths ["src" "resources"]
+
+ :deps
+ {org.clojure/clojure {:mvn/version "1.11.1"}
+  ring/ring-core {:mvn/version "1.11.0"}
+  ring/ring-jetty-adapter {:mvn/version "1.11.0"}
+  ring/ring-defaults {:mvn/version "0.3.4"}
+  compojure/compojure {:mvn/version "1.7.1"}
+  hiccup {:mvn/version "1.0.5"}
+  com.h2database/h2 {:mvn/version "2.2.220"}}
+
+ :aliases
+ {:run
+  {:main-opts ["-m" "clojurecafes.web"]}}}
