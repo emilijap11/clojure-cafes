@@ -7,8 +7,6 @@
 (def app
   (wrap-params routes/app-routes)
   )
-
 (defn -main []
       (println "Server pokrenut na http://localhost:3000")
       (run-jetty app {:port 3000 :join? false}))
-

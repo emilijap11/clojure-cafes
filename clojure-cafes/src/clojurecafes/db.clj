@@ -31,6 +31,7 @@
     :pet :yes
     :to-go :yes}
 
+
    {:id 3
     :name "Kafeterija Magazin 1907"
     :location "Stari Grad"
@@ -157,7 +158,8 @@
    {:id 12
     :name "Blaznavac"
     :location "Stari Grad"
-    :lat   44.819945971034464 :lng 0.46182447957088
+    :lat  44.81995358150138
+    :lng 20.461835209436106
     :coffee #{:espresso :mocha :latte :irish :nes :cappuccino}
     :milk #{:oat :soy}
     :ambience :cozy
@@ -194,7 +196,8 @@
    {:id 15
     :name "Kafeterija Neimar"
     :location "Vračar"
-    :lat 44.7995 :lng 20.4630
+    :lat 44.79400296228253
+    :lng 20.473157225245124
     :coffee #{:espresso :latte :nes :cappuccino}
     :milk #{:oat :soy}
     :ambience :cozy
@@ -204,10 +207,13 @@
     :pet :yes
     :to-go :no}
 
+
+
    {:id 16
     :name         "7am Roasters Neimar"
     :location "Vračar"
-    :lat 44.80664091133439 :lng 20.4724941
+    :lat 44.80664091133439
+    :lng 20.4724941
     :coffee #{:espresso :filter :nes :cappuccino}
     :milk #{:oat :soy}
     :ambience :work
@@ -220,7 +226,8 @@
    {:id           17
     :name         "Baristocratia Coffee Society"
     :location     "Vračar"
-    :lat          44.8108 :lng 20.4678
+    :lat 44.8108
+    :lng 20.4678
     :coffee       #{:espresso :filter :nes :cappuccino}
     :milk         #{:oat :soy }
     :ambience     :trendy
@@ -244,6 +251,10 @@
     :smoke     :smoke
     :pet          :no
     :to-go        :yes}
+
+
+
+
    {:id           19
     :name         "Kafeterija Sava Centar"
     :location     "Savski venac"
@@ -336,6 +347,8 @@
     :pet          :yes
     :to-go        :yes}
 
+
+
    {:id 26
     :name "Kafeterija Mlin Voždovac"
     :location "Voždovac"
@@ -363,6 +376,9 @@
     :smoke :no-smoke
     :pet :yes
     :to-go :no}
+
+
+
    {:id           28
     :name         "Java Coffee Roastery"
     :location     "Čukarica"
