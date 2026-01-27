@@ -242,7 +242,7 @@ select {
     font-size: 16px;
     font-family: 'Garamond', 'Georgia', serif;
     background:  linear-gradient(135deg, #a67c52, #8b5e3c); ;
-    color: #c1a67a;
+    color: #e0d4c1;
 
     appearance: none;
     cursor: pointer;
@@ -254,7 +254,7 @@ select {
 p {
     text-align: center;
     font-size: 18px;
-    color: white;
+    color: #e0d4c1;
     margin: 30px 0;
 }
 
