@@ -1,411 +1,379 @@
 (ns clojurecafes.db)
 
 (def cafes
-  [
-   {:id 1
-    :name "Kafeterija Dorćol"
-    :location "Stari Grad"
-    :lat 44.821494351797654
-    :lng 20.468774709829248
-
-    :coffee #{:espresso :latte :cappuccino :cortado :americano :macha}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 22
-    :coffee-until 22
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 2
-    :name "Kafeterija Studentski Trg"
-    :location "Stari Grad"
-    :lat 44.8205
-    :lng 20.4570
-    :coffee #{:espresso :latte :cappuccino }
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 22
-    :coffee-until 22
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-
-   {:id 3
-    :name "Kafeterija Magazin 1907"
-    :location "Stari Grad"
-    :lat 44.8180
-    :lng 20.4575
-    :coffee #{:espresso :latte :filter :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 23
-    :coffee-until 23
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 4
-    :name "Pržionica D59B"
-    :location "Stari Grad"
-    :lat 44.8100
-    :lng 20.4750
-    :coffee #{:espresso :filter :americano :cappuccino}
-    :milk #{:oat :coconut :soy}
-    :ambience :trendy
-    :open-until 22
-    :coffee-until 22
-    :smoke :smoke
-    :pet :yes
-    :to-go :no}
-
-   {:id 5
-    :name "Caffe Factory"
-    :location "Vračar"
-    :lat 44.8120
-    :lng 20.4710
-    :coffee #{:espresso :latte :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :work
-    :open-until 23
-    :coffee-until 23
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 6
-    :name "Coffeedream"
-    :location "Stari Grad"
-    :lat 44.8202
-    :lng 20.4560
-    :coffee #{:espresso :latte :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 23
-    :coffee-until 23
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 7
-    :name "Baristocratia Coffee Society"
-    :location "Vračar"
-    :lat 44.8108
-    :lng 20.4678
-    :coffee #{:espresso :filter :cappuccino}
-    :milk #{:oat :soy }
-    :ambience :trendy
-    :open-until 23
-    :coffee-until 23
-    :smoke :smoke
-    :pet :yes
-    :to-go :no}
-
-   {:id 8
-    :name "Simbol Specialty Coffee"
-    :location "Stari Grad"
-    :lat 44.8170
-    :lng 20.4570
-    :coffee #{:espresso :filter :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :work
-    :open-until 18
-    :coffee-until 18
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 9
-    :name "Way Cup Kafeterija"
-    :location "Stari Grad"
-    :lat 44.8135
-    :lng 20.4630
-    :coffee #{:espresso :latte :cappuccino}
-    :milk #{:oat :soy }
-    :ambience :cozy
-    :open-until 21
-    :coffee-until 21
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 10
-    :name "The Cups Coffee House"
-    :location "Stari Grad"
-    :lat 44.8150
-    :lng 20.4640
-    :coffee #{:espresso :latte :americano :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 19
-    :coffee-until 19
-    :smoke :smoke
-    :pet :yes}
-   {:id 11
-    :name "Coca Dream Venizelosova"
-    :location "Stari Grad"
-    :lat 44.8160 :lng 20.4640
-    :coffee #{:espresso :latte :americano :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 23
-    :coffee-until 23
-    :smoke   :smoke
-    :pet :yes
-    :to-go :yes}
-
-   {:id 12
-    :name "Blaznavac"
-    :location "Stari Grad"
-    :lat  44.81995358150138
-    :lng 20.461835209436106
-    :coffee #{:espresso :mocha :latte :irish :nes :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 24
-    :coffee-until 24
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-   {:id 13
-    :name "Coffee Dream Stari Grad"
-    :location "Stari Grad"
-    :lat 44.81794587022444 :lng 20.457969683512694
-    :coffee #{:espresso :latte :americano :mocha :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 23.5
-    :coffee-until 23.5
-    :smoke :smoke
-    :pet :yes
-    :to-go :yes}
-   {:id 14
-    :name "Ljubica"
-    :location "Stari Grad"
-    :lat 44.82117170613017
-    :lng 20.462475791104403
-    :coffee #{:espresso :americano :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 24
-    :coffee-until 24
-    :smoke :smoke
-    :pet :yes
-    :to-go :no}
-   {:id 15
-    :name "Kafeterija Neimar"
-    :location "Vračar"
-    :lat 44.79400296228253
-    :lng 20.473157225245124
-    :coffee #{:espresso :latte :nes :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 22
-    :coffee-until 22
-    :smoke :smoke
-    :pet :yes
-    :to-go :no}
-
-
-
-   {:id 16
-    :name         "7am Roasters Neimar"
-    :location "Vračar"
-    :lat 44.80664091133439
-    :lng 20.4724941
-    :coffee #{:espresso :filter :nes :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :work
-    :open-until   18
-    :coffee-until 18
-    :smoke     :smoke
-    :pet          :yes
-    :to-go        :no}
-
-   {:id           17
-    :name         "Baristocratia Coffee Society"
-    :location     "Vračar"
-    :lat 44.8108
-    :lng 20.4678
-    :coffee       #{:espresso :filter :nes :cappuccino}
-    :milk         #{:oat :soy }
-    :ambience     :trendy
-    :open-until   23
-    :coffee-until 23
-    :smoke     :smoke
-    :pet          :yes
-    :to-go        :no}
-
-
-   {:id           18
-    :name         "Holy Beans"
-    :location     "Centar"
-    :lat          44.8175
-    :lng          20.4575
-    :coffee       #{:latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :trendy
-    :open-until   17
-    :coffee-until 17
-    :smoke     :smoke
-    :pet          :no
-    :to-go        :yes}
-
-
-
-
-   {:id           19
-    :name         "Kafeterija Sava Centar"
-    :location     "Savski venac"
-    :lat          44.7968
-    :lng          20.4534
-    :coffee       #{:espresso :latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   21
-    :coffee-until 21
-    :smoke    :smoke
-    :pet          :yes
-    :to-go        :yes}
-   {:id           20
-    :name         "Kafeterija Gardoš"
-    :location     "Zemun"
-    :lat          44.85317620361723
-    :lng          20.414388368524737
-    :coffee       #{:espresso :americano :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   22
-    :coffee-until 22
-    :smoke      :smoke
-    :pet          :yes
-    :to-go        :no}
-   {:id           21
-    :name         "Kafeterija Zemun"
-    :location     "Zemun"
-    :lat          44.86169412373176
-    :lng          20.38417596810156
-    :coffee       #{:espresso :latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   22
-    :coffee-until 22
-    :smoke     :smoke
-    :pet          :yes
-    :to-go        :yes}
-   {:id           22
-    :name         "Kafeterija Banovo Brdo"
-    :location     "Banovo Brdo"
-    :lat          44.77613950761957
-    :lng          20.4132098386619
-    :coffee       #{:espresso :latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   22
-    :coffee-until 22
-    :smoke      :smoke
-    :pet          :yes
-    :to-go        :yes}
-   {:id           23
-    :name         "Holy Beans Bulevar"
-    :location     "Zvezdara"
-    :lat          44.80541366521654
-    :lng          20.47532716422432
-    :coffee       #{:latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :trendy
-    :open-until   20
-    :coffee-until 20
-    :smoke      :smoke
-    :pet          :no
-    :to-go        :yes}
-   {:id           24
-    :name         "Ginger Bar"
-    :location     "Stari Grad"
-    :lat          44.82030068276317
-    :lng          20.471204272684734
-    :coffee       #{:espresso :latte :americano :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   24
-    :coffee-until 22
-    :smoke      :smoke
-    :pet          :yes
-    :to-go        :yes}
-   {:id           25
-    :name         "Kafeterija Voždovac"
-    :location     "Voždovac"
-    :lat          44.772056663906895,
-    :lng          20.475880672439377
-    :coffee       #{:espresso :latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   22
-    :coffee-until 22
-    :smoke      :smoke
-    :pet          :yes
-    :to-go        :yes}
-
-
-
-   {:id 26
-    :name "Kafeterija Mlin Voždovac"
-    :location "Voždovac"
-    :lat 44.775242246620365
-    :lng  20.48141628176198
-    :coffee       #{:espresso :americano :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     #{ :work :cozy}
-    :open-until   23
-    :coffee-until 23
-    :smoke      :smoke
-    :pet          :no
-    :to-go        :yes}
-
-   {:id        27
-    :name "Holy Beans Voždovac"
-    :location "Voždovac"
-    :lat 44.77743565152988
-    :lng 20.47660976351284
-    :coffee #{:espresso :filter :latte :cappuccino}
-    :milk #{:oat :soy}
-    :ambience :cozy
-    :open-until 23
-    :coffee-until 23
-    :smoke :no-smoke
-    :pet :yes
-    :to-go :no}
-
-
-
-   {:id           28
-    :name         "Java Coffee Roastery"
-    :location     "Čukarica"
-    :lat          44.78844095383016
-    :lng          20.42154742691103
-    :coffee       #{:espresso :latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   22
-    :coffee-until 22
-    :smoke      :smoke
-    :pet          :yes
-    :to-go        :yes}
-
-   {:id           29
-    :name         "Kafeterija West 65"
-    :location     "Novi Beograd"
-    :lat          44.81305972955327
-    :lng          20.400077322146657
-    :coffee       #{:espresso :latte :cappuccino}
-    :milk         #{:oat :soy}
-    :ambience     :cozy
-    :open-until   22
-    :coffee-until 22
-    :smoke      :smoke
-    :pet          :yes
-    :to-go        :yes}
-
-
-   ])
+ [{:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:macha :americano :cortado :latte :espresso :cappuccino}
+   :name "Kafeterija Dorćol"
+   :coffee-until 22
+   :id 1
+   :pet :yes
+   :ambience :cozy
+   :lat 44.821494351797654
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 22
+   :lng 20.468774709829248}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Kafeterija Studentski Trg"
+   :coffee-until 22
+   :id 2
+   :pet :yes
+   :ambience :cozy
+   :lat 44.8205
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 22
+   :lng 20.457}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :filter :cappuccino}
+   :name "Kafeterija Magazin 1907"
+   :coffee-until 23
+   :id 3
+   :pet :yes
+   :ambience :cozy
+   :lat 44.818
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 23
+   :lng 20.4575}
+  {:milk #{:oat :soy :coconut}
+   :to-go :no
+   :coffee #{:americano :espresso :filter :cappuccino}
+   :name "Pržionica D59B"
+   :coffee-until 22
+   :id 4
+   :pet :yes
+   :ambience :trendy
+   :lat 44.81
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 22
+   :lng 20.475}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Caffe Factory"
+   :coffee-until 23
+   :id 5
+   :pet :yes
+   :ambience :work
+   :lat 44.812
+   :smoke :smoke
+   :location "Vračar"
+   :open-until 23
+   :lng 20.471}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Coffeedream"
+   :coffee-until 23
+   :id 6
+   :pet :yes
+   :ambience :cozy
+   :lat 44.8202
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 23
+   :lng 20.456}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:espresso :filter :cappuccino}
+   :name "Baristocratia Coffee Society"
+   :coffee-until 23
+   :id 7
+   :pet :yes
+   :ambience :trendy
+   :lat 44.8108
+   :smoke :smoke
+   :location "Vračar"
+   :open-until 23
+   :lng 20.4678}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:espresso :filter :cappuccino}
+   :name "Simbol Specialty Coffee"
+   :coffee-until 18
+   :id 8
+   :pet :yes
+   :ambience :work
+   :lat 44.817
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 18
+   :lng 20.457}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Way Cup Kafeterija"
+   :coffee-until 21
+   :id 9
+   :pet :yes
+   :ambience :cozy
+   :lat 44.8135
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 21
+   :lng 20.463}
+  {:milk #{:oat :soy}
+   :coffee #{:americano :latte :espresso :cappuccino}
+   :name "The Cups Coffee House"
+   :coffee-until 19
+   :id 10
+   :pet :yes
+   :ambience :cozy
+   :lat 44.815
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 19
+   :lng 20.464}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:americano :latte :espresso :cappuccino}
+   :name "Coca Dream Venizelosova"
+   :coffee-until 23
+   :id 11
+   :pet :yes
+   :ambience :cozy
+   :lat 44.816
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 23
+   :lng 20.464}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:irish :nes :latte :espresso :mocha :cappuccino}
+   :name "Blaznavac"
+   :coffee-until 24
+   :id 12
+   :pet :yes
+   :ambience :cozy
+   :lat 44.81995358150138
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 24
+   :lng 20.461835209436106}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:americano :latte :espresso :mocha :cappuccino}
+   :name "Coffee Dream Stari Grad"
+   :coffee-until 23.5
+   :id 13
+   :pet :yes
+   :ambience :cozy
+   :lat 44.81794587022444
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 23.5
+   :lng 20.457969683512694}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:americano :espresso :cappuccino}
+   :name "Ljubica"
+   :coffee-until 24
+   :id 14
+   :pet :yes
+   :ambience :cozy
+   :lat 44.82117170613017
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 24
+   :lng 20.462475791104403}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:nes :latte :espresso :cappuccino}
+   :name "Kafeterija Neimar"
+   :coffee-until 22
+   :id 15
+   :pet :yes
+   :ambience :cozy
+   :lat 44.79400296228253
+   :smoke :smoke
+   :location "Vračar"
+   :open-until 22
+   :lng 20.473157225245124}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:nes :espresso :filter :cappuccino}
+   :name "7am Roasters Neimar"
+   :coffee-until 18
+   :id 16
+   :pet :yes
+   :ambience :work
+   :lat 44.80664091133439
+   :smoke :smoke
+   :location "Vračar"
+   :open-until 18
+   :lng 20.4724941}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:nes :espresso :filter :cappuccino}
+   :name "Baristocratia Coffee Society"
+   :coffee-until 23
+   :id 17
+   :pet :yes
+   :ambience :trendy
+   :lat 44.8108
+   :smoke :smoke
+   :location "Vračar"
+   :open-until 23
+   :lng 20.4678}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :cappuccino}
+   :name "Holy Beans"
+   :coffee-until 17
+   :id 18
+   :pet :no
+   :ambience :trendy
+   :lat 44.8175
+   :smoke :smoke
+   :location "Centar"
+   :open-until 17
+   :lng 20.4575}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Kafeterija Sava Centar"
+   :coffee-until 21
+   :id 19
+   :pet :yes
+   :ambience :cozy
+   :lat 44.7968
+   :smoke :smoke
+   :location "Savski venac"
+   :open-until 21
+   :lng 20.4534}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:americano :espresso :cappuccino}
+   :name "Kafeterija Gardoš"
+   :coffee-until 22
+   :id 20
+   :pet :yes
+   :ambience :cozy
+   :lat 44.85317620361723
+   :smoke :smoke
+   :location "Zemun"
+   :open-until 22
+   :lng 20.414388368524737}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Kafeterija Zemun"
+   :coffee-until 22
+   :id 21
+   :pet :yes
+   :ambience :cozy
+   :lat 44.86169412373176
+   :smoke :smoke
+   :location "Zemun"
+   :open-until 22
+   :lng 20.38417596810156}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Kafeterija Banovo Brdo"
+   :coffee-until 22
+   :id 22
+   :pet :yes
+   :ambience :cozy
+   :lat 44.77613950761957
+   :smoke :smoke
+   :location "Banovo Brdo"
+   :open-until 22
+   :lng 20.4132098386619}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :cappuccino}
+   :name "Holy Beans Bulevar"
+   :coffee-until 20
+   :id 23
+   :pet :no
+   :ambience :trendy
+   :lat 44.80541366521654
+   :smoke :smoke
+   :location "Zvezdara"
+   :open-until 20
+   :lng 20.47532716422432}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:americano :latte :espresso :cappuccino}
+   :name "Ginger Bar"
+   :coffee-until 22
+   :id 24
+   :pet :yes
+   :ambience :cozy
+   :lat 44.82030068276317
+   :smoke :smoke
+   :location "Stari Grad"
+   :open-until 24
+   :lng 20.471204272684734}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Kafeterija Voždovac"
+   :coffee-until 22
+   :id 25
+   :pet :yes
+   :ambience :cozy
+   :lat 44.772056663906895
+   :smoke :smoke
+   :location "Voždovac"
+   :open-until 22
+   :lng 20.475880672439377}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:americano :espresso :cappuccino}
+   :name "Kafeterija Mlin Voždovac"
+   :coffee-until 23
+   :id 26
+   :pet :no
+   :ambience #{:work :cozy}
+   :lat 44.775242246620365
+   :smoke :smoke
+   :location "Voždovac"
+   :open-until 23
+   :lng 20.48141628176198}
+  {:milk #{:oat :soy}
+   :to-go :no
+   :coffee #{:latte :espresso :filter :cappuccino}
+   :name "Holy Beans Voždovac"
+   :coffee-until 23
+   :id 27
+   :pet :yes
+   :ambience :cozy
+   :lat 44.77743565152988
+   :smoke :no-smoke
+   :location "Voždovac"
+   :open-until 23
+   :lng 20.47660976351284}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Java Coffee Roastery"
+   :coffee-until 22
+   :id 28
+   :pet :yes
+   :ambience :cozy
+   :lat 44.78844095383016
+   :smoke :smoke
+   :location "Čukarica"
+   :open-until 22
+   :lng 20.42154742691103}
+  {:milk #{:oat :soy}
+   :to-go :yes
+   :coffee #{:latte :espresso :cappuccino}
+   :name "Kafeterija West 65"
+   :coffee-until 22
+   :id 29
+   :pet :yes
+   :ambience :cozy
+   :lat 44.81305972955327
+   :smoke :smoke
+   :location "Novi Beograd"
+   :open-until 22
+   :lng 20.400077322146657}])
